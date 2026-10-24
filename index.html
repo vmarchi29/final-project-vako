@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARZONE - Online Car Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CARZONE</div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#cars">Cars</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="მანქანების ძიება...">
+            </div>
+            <button id="favoritesBtn" class="icon-btn">
+                <img src="./icons8-favorites-50.png" alt="Favorites">
+                <span id="favoritesCount">0</span>
+            </button>
+            <button id="cartBtn" class="icon-btn">
+                <img src="./icons8-cart-30.png" alt="Cart">
+                <span id="cartCount">0</span>
+            </button>
+            <button id="modeToggle" class="mode-btn">
+                <img id="modeIcon" src="./icons8-moon-30.png" alt="Mode">
+            </button>
+            <div class="hamburger">
+                <img src="./icons8-hamburger-menu-50.png" alt="Menu">
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>FIND YOUR<br><span>DREAM CAR</span></h1>
+            <p>Find the perfect car for your lifestyle.</p>
+            <a href="#cars" class="explore-btn">EXPLORE CARS</a>
+        </div>
+        <div class="hero-image">
+            <img src="./621d211292a9c10001654bf4.jpg" alt="">
+        </div>
+    </section>
+
+    <main id="cars" class="main-container">
+        
+        <aside class="filters-sidebar">
+            <h3>Filter Cars</h3>
+            
+            <div class="filter-group">
+                <label>Brand</label>
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Tesla">Tesla</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Fuel Type</label>
+                <select id="fuelFilter">
+                    <option value="all">All</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Electric">Electric</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Transmission</label>
+                <select id="transFilter">
+                    <option value="all">All</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Price Range</label>
+                <div class="price-inputs">
+                    <input type="number" id="minPrice" placeholder="Min Price">
+                    <input type="number" id="maxPrice" placeholder="Max Price">
+                </div>
+            </div>
+            <button id="resetFilters" class="reset-btn">Reset Filters</button>
+        </aside>
+
+        <section class="content-area">
+            <div class="sort-bar">
+                <h2>Available Cars</h2>
+                <div class="sort-select-wrapper">
+                    <label for="sortSelect">Sort By:</label>
+                    <select id="sortSelect">
+                        <option value="default">Default</option>
+                        <option value="low-high">Price: Low → High</option>
+                        <option value="high-low">Price: High → Low</option>
+                        <option value="a-z">Name: A → Z</option>
+                        <option value="z-a">Name: Z → A</option>
+                        <option value="newest">Year: Newest</option>
+                        <option value="oldest">Year: Oldest</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="cars-grid" id="carsGrid"></div>
+        </section>
+    </main>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">X</span>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="sidebarPanel" class="side-panel">
+        <div class="panel-header">
+            <h2 id="panelTitle">Your Cart</h2>
+            <span class="close-panel">X</span>
+        </div>
+        <div class="panel-body" id="panelBody"></div>
+        <div class="panel-footer" id="panelFooter"></div>
+    </div>
+
+    <section id="about" class="info-section">
+        <h2>About CARZONE</h2>
+        <p>CARZONE არის ონლაინ მაღაზია სადაც შეძლებთ მანქანების ყიდვას</p>
+    </section>
+
+    <section id="contact" class="info-section">
+        <h2>Contact Us</h2>
+        <p>Email: support@carzone.com | Phone: +995 555 12 34 56</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CARZONE. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
